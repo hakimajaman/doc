@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar';
+import Sidebar from '@/components/Sidebar';
 import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 
@@ -11,8 +12,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box as="main">
+      <Box as="main" overflow="hidden">
         <Navbar />
+        <Box px={{ base: 'full', md: '5%', lg: '15%', xl: '25%' }} mt="61px">
+          <Sidebar>Log Activity</Sidebar>
+        </Box>
       </Box>
     </>
   );
