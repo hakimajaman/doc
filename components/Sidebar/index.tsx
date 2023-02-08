@@ -94,7 +94,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
 };
 
 interface NavItemProps extends FlexProps {
-	icon: IconType;
+	icon?: IconType;
 	children: ReactText;
 }
 const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
@@ -118,7 +118,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
 						mr="4"
 						fontSize="16"
 						_groupHover={{
-							color: useColorModeValue('purple.400', 'purple.500'),
+							color: 'purple.400',
 						}}
 						as={icon}
 					/>

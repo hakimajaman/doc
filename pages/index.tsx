@@ -1,6 +1,8 @@
+import InfoCard from '@/components/Card/InfoCard';
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
-import { Box } from '@chakra-ui/react';
+import HomeHeader from '@/components/Welcome/HomeHeader';
+import { Box, ListItem, UnorderedList } from '@chakra-ui/react';
 import Head from 'next/head';
 
 export default function Home() {
@@ -15,7 +17,21 @@ export default function Home() {
       <Box as="main" overflow="hidden">
         <Navbar />
         <Box px={{ base: 'full', md: '5%', lg: '15%', xl: '25%' }} mt="61px">
-          <Sidebar>Log Activity</Sidebar>
+          <Sidebar>
+            <HomeHeader
+              title={'Welcome to my documentation website!'}
+              description={
+                "Here, you will find the latest commits and updates of my specific repository and what's new from it. Enjoy!"
+              }
+              mb={5}
+            />
+            <InfoCard title={'NEW UPDATED!'}>
+              <UnorderedList>
+                <ListItem>Add new home header welcoming message</ListItem>
+                <ListItem>Add box what's new!</ListItem>
+              </UnorderedList>
+            </InfoCard>
+          </Sidebar>
         </Box>
       </Box>
     </>
